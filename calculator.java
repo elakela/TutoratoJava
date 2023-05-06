@@ -7,20 +7,20 @@ class Calculator{
                 return a-b;
             case "*": 
                 return a*b;
-            case: "/":
+            case"/":
                 return a/b;
-        }
         
         default: // non so cosa significhi, chiedere.
-            System.err.println("Unkown operator");
+            System.err.printl
             System.exit(1);
+        }
         return 0;
     }
 
     public static void main(String[] args){
-        if(args!= 3){
+        if(args.length!= 3){
             System.out.println("errore: manca qualche dato");
-            System.err.prinln("op può essere +, -, *, /");
+            System.err.println("op può essere +, -, *, /");
             System.exit(1);
         }
 
