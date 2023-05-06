@@ -1,4 +1,4 @@
-public class calculator{
+public class Calculator{
     private static int calculateResult(int a, int b, String op){
         switch(op){
             case "+":
@@ -18,7 +18,6 @@ public class calculator{
     }
 
     public static void main(String[] args){
-        System.out.println(args[0] + args[1] + args[2]);
         if(args.length < 3){
             System.err.println("errore: manca qualche dato");
             System.err.println("int, op, int");
