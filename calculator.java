@@ -1,26 +1,27 @@
-class Calculator{
+public class calculator{
     private static int calculateResult(int a, int b, String op){
         switch(op){
             case "+":
                 return a+b;
             case "-":
                 return a-b;
-            case "*": 
+            case "x": 
                 return a*b;
             case"/":
                 return a/b;
         
-        default: // non so cosa significhi, chiedere.
-            System.err.println();
+        default:
+            System.err.println("unkownon operator");
             System.exit(1);
         }
         return 0;
     }
 
     public static void main(String[] args){
-        if(args.length!= 3){
-            System.out.println("errore: manca qualche dato");
-            System.err.println("op può essere +, -, *, /");
+        System.out.println(args[0] + args[1] + args[2]);
+        if(args.length < 3){
+            System.err.println("errore: manca qualche dato");
+            System.err.println("int, op, int");
             System.exit(1);
         }
 
