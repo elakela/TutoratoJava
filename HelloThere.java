@@ -21,16 +21,20 @@ public class HelloThere {
         System.out.println("Hello World");
     }
 
-    private static void HelloThereSW(){
-        Wait(1000);
+    private static void Erase(){
         System.out.print("\u001B[2J");
         System.out.flush();
         System.out.print("\u001B[H");
         System.out.flush();
+    }
+
+    private static void HelloThereSW(){
+        Wait(1000);
+        Erase();
         System.out.print("\033[033m");
         System.out.println("- Hello There!");
 
-    }
+    } 
 
     public static void main(String[] args){
         PrintHello();
