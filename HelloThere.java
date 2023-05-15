@@ -1,5 +1,8 @@
 public class HelloThere {
-
+    private static String YELLOW = "\033[033m";
+    private static String RED = "\u001B[31m";
+    private static String CANCEL = "\u001B[2J";
+    private static String ENTER = "\u001B[H";
     private static void Wait(int n){
         try{
             Thread.sleep(n);
@@ -17,34 +20,32 @@ public class HelloThere {
     }
 
     private static void PrintHello(){
-        System.out.print("\u001B[31m");
-        System.out.println("Hello World");
+        System.out.println(RED + "Hello World");
     }
 
     private static void Erase(){
-        System.out.print("\u001B[2J");
+        System.out.println(CANCEL);
         System.out.flush();
-        System.out.print("\u001B[H");
+        System.out.print(ENTER);
         System.out.flush();
     }
 
-    private static void HelloThereSW(){
-        Wait(1000);
+    private static void PrintHelloThereSW(){
         Erase();
-        System.out.print("\033[033m");
-        System.out.println("- Hello There!");
+        System.out.println(YELLOW + "- Hello There!");
 
     } 
 
-    private static void StarWars(){
-        Wait(1000);
+    private static void PrintStarWars(){
         System.out.println("- General Kenobi");
     }
 
     public static void main(String[] args){
         PrintHello();
         PrintEllipsis();
-        HelloThereSW();
-        StarWars();
+        Wait(1000);
+        PrintHelloThereSW();
+        Wait(1000);
+        PrintStarWars();
     }    
 }
