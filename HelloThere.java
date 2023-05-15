@@ -1,8 +1,17 @@
 public class HelloThere {
 
+    private static void Wait(int n){
+        try{
+            Thread.sleep(n);
+        }
+        catch(InterruptedException e){
+            e.printStackTrace();
+        }
+    }
     
     private static void PrintEllipsis(){
         for(int i = 0; i<3; i++){
+            Wait(1000);
             System.out.println(".");
         }
     }
