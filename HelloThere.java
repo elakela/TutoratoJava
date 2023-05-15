@@ -3,6 +3,7 @@ public class HelloThere {
     private static String RED = "\u001B[31m";
     private static String CANCEL = "\u001B[2J";
     private static String ENTER = "\u001B[H";
+
     private static void Wait(int n){
         try{
             Thread.sleep(n);
