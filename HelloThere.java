@@ -36,9 +36,15 @@ public class HelloThere {
 
     } 
 
+    private static void StarWars(){
+        Wait(1000);
+        System.out.println("- General Kenobi");
+    }
+
     public static void main(String[] args){
         PrintHello();
         PrintEllipsis();
         HelloThereSW();
+        StarWars();
     }    
 }
